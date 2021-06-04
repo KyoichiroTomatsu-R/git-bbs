@@ -1,5 +1,7 @@
 package com.example.controller;
 
+import com.example.domain.Article;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
