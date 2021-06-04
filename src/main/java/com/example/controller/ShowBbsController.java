@@ -13,7 +13,7 @@ public class ShowBbsController {
     @RequestMapping("")
     public String index(Model model) {
         List<Article> articleList = articleRepository.findAll();
-        model.addAtribute("articleList", articleList);
+        model.addAttribute("articleList", articleList);
         return "index";
     }
 }
