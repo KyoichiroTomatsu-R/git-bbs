@@ -1,6 +1,7 @@
 package com.example.controller;
 
 import com.example.domain.Article;
+import com.example.form.ArticleForm;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
