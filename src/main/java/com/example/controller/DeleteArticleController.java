@@ -12,8 +12,8 @@ public class DeleteArticleController {
     private ArticleRepository articleRepository;
 
     @RequestMapping("/deleteArticle")
-    public String deleteArticle(int id) {
-        articleRepository.deleteById(id);
+    public String deleteArticle(int articleId) {
+        articleRepository.deleteById(articleId);
         return "redirect:/";
     }
 }
