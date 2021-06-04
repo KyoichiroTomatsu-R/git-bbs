@@ -15,17 +15,19 @@
 <hr>
 
 <div th:each="article : ${articleList}">
+
 	<div th:text="投稿者名"></div>
 	<div th:text="${article.name}"></div>
 	<div th:text="投稿内容"></div>
 	<div th:text="${article.content}"></div>
 	
 	<form th:action="@{/delete}" method="post">
-	<input type="hidden" name="articleId" th:value="${article.id}">
-	<button type="submit">投稿削除</button>
+		<input type="hidden" name="articleId" th:value="${article.id}">
+		<button type="submit">投稿削除</button>
 	</form>
 	
 	<div th:each="comment : ${article.commentList}">
+	
 		<div th:text="コメント者名"></div>
 		<div th:text="${comment.name}"></div>
 		<div th:text="コメント内容"></div>
@@ -33,10 +35,10 @@
 	</div>
 	
 	<form th:action="@{/inserts}" method="post" >
-	コメント者名:<input type="text" name="name" id="commentName"><br>
-	コメント内容：<textarea name="content" rows="4" cols="40"></textarea><br>
-	<input type="hidden" name="articleId" th:value="${article.id}">
-	<button type="submit">コメント投稿</button>
+		コメント者名:<input type="text" name="name" id="commentName"><br>
+		コメント内容：<textarea name="content" rows="4" cols="40"></textarea><br>
+		<input type="hidden" name="articleId" th:value="${article.id}">
+		<button type="submit">コメント投稿</button>
 	</form>
 	<hr>
 
